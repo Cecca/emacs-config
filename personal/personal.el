@@ -12,7 +12,15 @@
 (prelude-require-package 'cmake-mode)
 
 ;;; Clojure -------------------------------------------------------------------
-;; First, let's take a look at how it behaves out of the box
+;; Disable the display of the error buffer on error. The buffer is
+;; still in the background and can be accessed with
+;;
+;;    cider-visit-error-buffer
+;;
+(setq cider-show-error-buffer nil)
+
+;; Always use pretty printing in clojure repl
+(setq cider-repl-use-pretty-printing t)
 
 ;;; YAML ----------------------------------------------------------------------
 (prelude-require-package 'yaml-mode)
