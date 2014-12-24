@@ -46,3 +46,7 @@
 (prelude-require-package 'google-translate)
 (setq google-translate-default-source-language "it")
 (setq google-translate-default-target-language "en")
+
+;;; ---------------------------------------------------------------------------
+;;; Directory diff and navigation
+(prelude-require-package 'ztree)
