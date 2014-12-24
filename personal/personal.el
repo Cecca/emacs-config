@@ -55,3 +55,10 @@
 ;;; Expand-region
 (prelude-require-package 'expand-region)
 (global-set-key (kbd "M-2") #'er/expand-region)
+
+;;; ---------------------------------------------------------------------------
+;;; Smart mode line
+(prelude-require-package 'smart-mode-line)
+(sml/setup)
+(sml/apply-theme 'dark)
+(setq sml/mode-width 'full)
