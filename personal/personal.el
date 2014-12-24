@@ -50,3 +50,8 @@
 ;;; ---------------------------------------------------------------------------
 ;;; Directory diff and navigation
 (prelude-require-package 'ztree)
+
+;;; ---------------------------------------------------------------------------
+;;; Expand-region
+(prelude-require-package 'expand-region)
+(global-set-key (kbd "M-2") #'er/expand-region)
