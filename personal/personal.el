@@ -11,6 +11,12 @@
 ;;; CMake ---------------------------------------------------------------------
 (prelude-require-package 'cmake-mode)
 
+;;; Python --------------------------------------------------------------------
+(prelude-require-package 'jedi)
+(prelude-require-package 'jedi-direx)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
 ;;; Clojure -------------------------------------------------------------------
 ;; Disable the display of the error buffer on error. The buffer is
 ;; still in the background and can be accessed with

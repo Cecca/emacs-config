@@ -4,7 +4,7 @@
 ;;;
 
 ;; Font
-(set-face-attribute 'default nil :height 110)
+(set-face-attribute 'default nil :height 115)
 ;; Transparent background
                                         ;(set-frame-parameter nil 'alpha '(100 100))
 ;; Disable the scroll bar
