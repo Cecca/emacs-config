@@ -3,7 +3,8 @@
 ;; Spell checking language
 (setq ispell-dictionary "english")
 
-(prelude-require-package 'centered-window-mode)
+(prelude-require-package 'automargin)
+(require 'automargin)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
