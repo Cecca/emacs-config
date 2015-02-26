@@ -3,6 +3,8 @@
 ;; Spell checking language
 (setq ispell-dictionary "english")
 
+(prelude-require-package 'centered-window-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; Coding
@@ -36,6 +38,7 @@
 
 ;; Turn on reftex
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(add-hook 'LaTeX-mode-hook 'centered-window-mode)
 (setq reftex-plug-into-AUCTeX t)
 
 ;; Enable synctex
