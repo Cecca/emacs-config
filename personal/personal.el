@@ -55,3 +55,19 @@
 (prelude-require-package 'google-translate)
 (setq google-translate-default-source-language "it")
 (setq google-translate-default-target-language "en")
+
+;;; ---------------------------------------------------------------------------
+;;; Directory diff and navigation
+(prelude-require-package 'ztree)
+
+;;; ---------------------------------------------------------------------------
+;;; Expand-region
+(prelude-require-package 'expand-region)
+(global-set-key (kbd "M-2") #'er/expand-region)
+
+;;; ---------------------------------------------------------------------------
+;;; Smart mode line
+(prelude-require-package 'smart-mode-line)
+(sml/setup)
+(sml/apply-theme 'dark)
+(setq sml/mode-width 'full)
