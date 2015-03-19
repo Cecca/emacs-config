@@ -52,6 +52,15 @@
 ;;;
 
 ;;; ---------------------------------------------------------------------------
+;;; Multiple cursors
+(prelude-require-package 'multiple-cursors)
+
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;;; ---------------------------------------------------------------------------
 ;;; Google translate
 (prelude-require-package 'google-translate)
 (setq google-translate-default-source-language "it")
@@ -70,5 +79,5 @@
 ;;; Smart mode line
 (prelude-require-package 'smart-mode-line)
 (sml/setup)
-(sml/apply-theme 'dark)
+(sml/apply-theme 'light)
 (setq sml/mode-width 'full)
