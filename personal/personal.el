@@ -119,9 +119,12 @@
  user-full-name  "Matteo Ceccarello"
  message-signature
  (concat
-  "Matteo Ceccarello\n"
-  "PhD student, university of Padova\n"
+  "Matteo Ceccarello, PhD student, Computer Engineering\n"
+  "Universita' di Padova, Dipartimento di Ingegneria dell'Informazione\n"
+  "URL: http://www.dei.unipd.it/~ceccarel\n"
+  "LinkedIn: http://it.linkedin.com/pub/matteo-ceccarello/60/322/931/\n"
   "\n"))
+
 
 (require 'smtpmail)
 
