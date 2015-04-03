@@ -15,10 +15,10 @@
 (prelude-require-package 'cmake-mode)
 
 ;;; Python --------------------------------------------------------------------
-(prelude-require-package 'jedi)
-(prelude-require-package 'jedi-direx)
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+;(prelude-require-package 'jedi)
+;(prelude-require-package 'jedi-direx)
+;(add-hook 'python-mode-hook 'jedi:setup)
+;(setq jedi:complete-on-dot t)
 
 ;;; Clojure -------------------------------------------------------------------
 ;; Disable the display of the error buffer on error. The buffer is
@@ -95,3 +95,39 @@
 (sml/setup)
 (sml/apply-theme 'light)
 (setq sml/mode-width 'full)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Mail configuration
+;;;
+
+(require 'mu4e)
+
+;; default
+(setq mu4e-maildir "~/Mail/Gmail")
+(setq mu4e-drafts-folder "/[Gmail].Bozze")
+(setq mu4e-sent-folder   "/[Gmail].Posta inviata")
+(setq mu4e-trash-folder  "/[Gmail].Cestino")
+
+(setq mu4e-sent-messages-behavior 'delete)
+
+(setq mu4e-get-mail-command "offlineimap")
+
+;; something about ourselves
+(setq
+ user-mail-address "matteo.ceccarello@gmail.com"
+ user-full-name  "Matteo Ceccarello"
+ message-signature
+ (concat
+  "Matteo Ceccarello\n"
+  "PhD student, university of Padova\n"
+  "\n"))
+
+(require 'smtpmail)
+
+(setq message-send-mail-function 'smtpmail-send-it
+      smtpmail-stream-type 'starttls
+      smtpmail-default-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-service 587
+      smtpmail-smtp-user "matteo.ceccarello@gmail.com")
