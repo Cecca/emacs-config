@@ -6,12 +6,12 @@
 ;; Font
 (set-face-attribute 'default nil :height 115)
 ;; Transparent background
-                                        ;(set-frame-parameter nil 'alpha '(100 100))
+;;(set-frame-parameter nil 'alpha '(100 100))
 ;; Disable the scroll bar
 (scroll-bar-mode -1)
 
 ;; Change the default theme
-;(setq prelude-theme 'solarized-dark)
+(setq prelude-theme 'solarized-light)
 
 ;; Disable warnings from guru mode
 (setq prelude-guru nil)
